@@ -88,11 +88,13 @@ html[xmlns] .slides {display: block;}
 .flex-pauseplay a.flex-play:before { content: '\f003'; }
 
 /* Control Nav */
-.flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
+.flex-control-nav {width: 100%; position: absolute; top: 0px; text-align: right;}
 .flex-control-nav li {margin: 0 3px; display: inline-block; zoom: 1; *display: inline;}
-.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #fff; background: #d3d3d3; cursor: pointer; text-indent: -9999px; border-radius: 100%; }
-.flex-control-paging li a:hover { background: #fff; background: #13afeb; }
-.flex-control-paging li a.flex-active { background: #fff; background: #13afeb; cursor: default; }
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #fff; background: #d3d3d3; cursor: pointer; text-indent: -9999px; border-radius: 100%; font-size: 1px; color: #fff; }
+.flex-control-paging li a:hover { background: #fff; background: #727272; }
+.flex-control-paging li a.flex-active { background: #fff; background: #727272; cursor: default; }
+
+.flexslider.two  .flex-control-nav {top: auto; bottom: -65px; text-align: center;}
 
 .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
 .flex-control-thumbs li {width: 25%; float: left; margin: 0;}

@@ -3,9 +3,10 @@
 
 //	Visible, Sam Sehnert, samatdf, TeamDF, https://github.com/teamdf/jquery-visible/
 //	================================================================================
+
 (function($) {
  "use strict";
- 
+
 	(function($){
 		$.fn.visible = function(partial,hidden,direction) {
 			var $t				= $(this).eq(0),

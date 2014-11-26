@@ -4,9 +4,10 @@
 // People involved
 //  - Balazs Galambosi (maintainer)  
 //  - Michael Herf     (Pulse Algorithm)
+
 (function($) {
  "use strict";
- 
+
 (function(){
   
 // Scroll Variables (tweakable)
@@ -523,5 +524,6 @@ if (isMouseWheelSupported && isChrome) {
 };
 
 })();
+
 
 })(jQuery);

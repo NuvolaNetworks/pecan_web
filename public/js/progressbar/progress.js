@@ -1,3 +1,6 @@
+(function($) {
+ "use strict";
+
 (function( $ ){
   // Simple wrapper around jQuery animate to simplify animating progress from your app
   // Inputs: Progress as a percent, Callback
@@ -146,3 +149,6 @@ $(function() {
   });
   
 });
+
+
+})(jQuery);

@@ -8,7 +8,9 @@
 
 	// init cubeportfolio
     gridContainer.cubeportfolio({
-       
+
+        defaultFilter: '*',
+
         animationType: 'fadeOutTop',
 
         gapHorizontal: 0,
@@ -17,7 +19,7 @@
 
         gridAdjustment: 'responsive',
 
-        caption: 'overlayBottomPush',
+        caption: 'zoom',
 
         displayType: 'lazyLoading',
 
@@ -27,24 +29,52 @@
         lightboxDelegate: '.cbp-lightbox',
         lightboxGallery: true,
         lightboxTitleSrc: 'data-title',
-        lightboxShowCounter: true
+        lightboxShowCounter: true,
 
-        // NOTE: singlePage is not enabled in this example
+        // singlePage popup
+        singlePageDelegate: '.cbp-singlePage',
+        singlePageDeeplinking: true,
+        singlePageStickyNavigation: true,
+        singlePageShowCounter: true,
+        singlePageCallback: function (url, element) {
+            // to update singlePage content use the following method: this.updateSinglePage(yourContent)
+        },
+
+        // singlePageInline
+        singlePageInlineDelegate: '.cbp-singlePageInline',
+        singlePageInlinePosition: 'above',
+        singlePageInlineShowCounter: true,
+        singlePageInlineInFocus: true,
+        singlePageInlineCallback: function(url, element) {
+            // to update singlePageInline content use the following method: this.updateSinglePageInline(yourContent)
+        }
     });
 
     // add listener for filters click
     filtersContainer.on('click', '.cbp-filter-item', function (e) {
-        
-        var me = $(this);
+
+        var me = $(this), wrap;
 
         // get cubeportfolio data and check if is still animating (reposition) the items.
         if ( !$.data(gridContainer[0], 'cubeportfolio').isAnimating ) {
-            me.addClass('cbp-filter-item-active').siblings().removeClass('cbp-filter-item-active');
+
+            if ( filtersContainer.hasClass('cbp-l-filters-dropdown') ) {
+                wrap = $('.cbp-l-filters-dropdownWrap');
+
+                wrap.find('.cbp-filter-item').removeClass('cbp-filter-item-active');
+
+                wrap.find('.cbp-l-filters-dropdownHeader').text(me.text());
+
+                me.addClass('cbp-filter-item-active');
+            } else {
+                me.addClass('cbp-filter-item-active').siblings().removeClass('cbp-filter-item-active');
+            }
+
         }
 
         // filter the items
         gridContainer.cubeportfolio('filter', me.data('filter'), function () {});
-    
+
     });
 
     // activate counter for filters
@@ -55,13 +85,13 @@
     var loadMoreObject = {
 
             init: function () {
-                
+
                 var t = this;
 
                 // the job inactive
                 t.isActive = false;
 
-                t.numberOfClicks = 0;          
+                t.numberOfClicks = 0;
 
                 // cache link selector
                 t.loadMore = $('.cbp-l-loadMore-text-link');
@@ -88,11 +118,11 @@
             },
 
             getNewItems: function () {
-                
+
                 var t = this, topLoadMore, topWindow, clicks;
 
                 if ( t.isActive || t.loadMore.hasClass('cbp-l-loadMore-text-stop') ) return;
-                
+
                 topLoadMore = t.loadMore.offset().top;
                 topWindow = t.window.scrollTop() + t.window.height();
 
@@ -107,7 +137,7 @@
                 // perform ajax request
                 $.ajax({
                     url: t.loadMore.attr('data-href'),
-                    type: 'POST',
+                    type: 'GET',
                     dataType: 'HTML',
                     cache: true
                 })
@@ -143,7 +173,7 @@
 
                                 if (topLoadMore <= topWindow) {
                                     t.getNewItems();
-                                }                                
+                                }
                             }
 
                          });
@@ -152,7 +182,7 @@
                 .fail(function() {
                     // make the job inactive
                     t.isActive = false;
-                });        
+                });
             }
         },
         loadMore = Object.create(loadMoreObject);
@@ -168,11 +198,12 @@
     gridContainer.on('filterComplete', function () {
         loadMore.window.trigger('scroll.loadMoreObject');
     });
-    
+
 
     /* LOAD MORE END */
 
 
 })(jQuery, window, document);
+
 
 })(jQuery);

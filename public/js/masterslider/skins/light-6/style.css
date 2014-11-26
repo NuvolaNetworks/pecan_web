@@ -39,7 +39,7 @@
 .ms-skin-light-6 .ms-nav-prev {
 	position: absolute;
 	cursor: pointer;
-	z-index: 10;
+	z-index: 110;
 	width: 45px;
 	height: 45px;
 	background: url(light-skin-6.png) white;
@@ -72,31 +72,6 @@
 	background-position: -86px -103px;
 }
 
-.ms-skin-light-6 .ms-thumb-frame-selected {
-	opacity: 0.6;
-}
-
-.ms-skin-light-6 .ms-thumb-list.ms-dir-h {
-	bottom: -60px;
-	width: 100%;
-	height: 60px;
-}
-
-.ms-skin-light-6 .ms-thumb-list.ms-dir-v {
-	height: 100%;
-	width: 60px;
-	right: -60px;
-	top: 0;
-}
-
-.ms-skin-light-6 .ms-thumb-frame {
-	cursor: pointer;
-	float: left;
-	width: 60px;
-	height: 60px;
-	margin: 1px 0 0 1px;
-	overflow: hidden;
-}
 
 .ms-skin-light-6 .ms-bullets.ms-dir-h {
 	position: absolute;
@@ -125,62 +100,21 @@
 	border-radius: 15px;
 }
 
-
 .ms-skin-light-6 .ms-bullet-selected {
 	background-color: white;
 	border-color: black;
 	border-color: rgba(0, 0, 0, 0.44);
 }
 
-.ms-skin-light-6 .ms-sbar {
-	position: absolute;
-}
-
-.ms-skin-light-6 .ms-sbar.ms-dir-h {
-	left: 10px;
-	right: 10px;
-	top: 5px
-}
-
-.ms-skin-light-6 .ms-sbar.ms-dir-v {
-	top: 10px;
-	bottom: 10px;
-	right: 5px
-}
-
-.ms-skin-light-6 .ms-sbar .ms-bar {
-	height: 4px;
-	background: #DD00FF;
-	border-radius: 4px;
-}
-
-.ms-skin-light-6 .ms-sbar.ms-dir-v .ms-bar {
-	width: 4px;
-}
-
-.ms-skin-light-6 .ms-timerbar {
-	width: 100%;
-	bottom: 0px;
-	position: absolute;
-}
 
 .ms-skin-light-6 .ms-time-bar {
 	height: 3px;
 	background: #FFFFFF;
 }
 
-.ms-skin-light-6 .ms-ctimer {
-	position: absolute;
-	top: 30px;
-	left: 30px;
-	cursor: pointer;
-}
-
-.ms-skin-light-6 .ms-ctimer-bullet {}
-
 .ms-skin-light-6 .ms-tooltip{
 	position: absolute;
-	z-index: 110;
+	z-index: 210;
 	cursor: auto;
 }
 
@@ -230,16 +164,6 @@
 	right: -10px;
 }
 
-@keyframes point-anim{
-	0% 		{transform: scale(0.5); -webkit-transform: scale(0.5); -moz-transform: scale(0.5); -o-transform: scale(0.5); -ms-transform: scale(0.5);  opacity: 1; }
-	100% 	{transform: scale(0.5); -webkit-transform: scale(0.5); -moz-transform: scale(1.5); -o-transform: scale(1.5); -ms-transform: scale(1.5);  opacity: 0; }
-}
-
-@-webkit-keyframes point-anim{
-	0% 		{-webkit-transform: scale(0.5); opacity: 1; }
-	100% 	{-webkit-transform: scale(1.5);	opacity: 0; }
-}
-
 .ms-skin-light-6 .ms-tooltip-point {cursor: pointer;}
 .ms-skin-light-6 .ms-tooltip-point .ms-point-center {
 	width: 12px;
@@ -249,7 +173,7 @@
 	background: white;
 	margin: -8px 0 0 -8px;
 	position: absolute;
-	z-index: 5;
+	z-index: 105;
 }
 
 .ms-skin-light-6 .ms-tooltip-point .ms-point-border {
@@ -267,19 +191,10 @@
 	-o-animation: point-anim 1.5s infinite;
 }
 
-/* In Android browser, using css animations over slider causes some crashes */
-.ms-android.ms-skin-light-6 .ms-tooltip-point .ms-point-border{
-	animation:none;
-	-moz-animation:none;
-	-webkit-animation:none;
-	-o-animation:none;
-}
-
 .ms-ie7.ms-skin-light-6 .ms-tooltip-point .ms-point-border,
 .ms-ie8.ms-skin-light-6 .ms-tooltip-point .ms-point-border{
 	display: none;
 }
-
 
 .ms-skin-light-6  .ms-tooltip {
 	max-width:200px;

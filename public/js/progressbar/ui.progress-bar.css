@@ -14,7 +14,7 @@
   position: relative;
   height: 33px;
   padding-right: 2px;
-  border-bottom: 9px solid #e0e0e0;
+  border-bottom: 5px solid #e0e0e0;
   margin-top: -25px;
 }
 .ui-progress {
@@ -22,29 +22,37 @@
   display: block;
   overflow: hidden;
   height: 33px;
-  border-bottom: 9px solid #41a8ff;
+  border-bottom: 5px solid #41a8ff;
 }
 .ui-progress.two {
-  border-bottom: 9px solid #89b505;
+  border-bottom: 5px solid #89b505;
 }
 .ui-progress.three {
-  border-bottom: 9px solid #9b43f6;
+  border-bottom: 5px solid #9b43f6;
 }
 .ui-progress.four {
-  border-bottom: 9px solid #ffc412;
+  border-bottom: 5px solid #ffc412;
 }
 .ui-progress.five {
-  border-bottom: 9px solid #fd4040;
+  border-bottom: 5px solid #fd4040;
 }
 .ui-progress span.ui-label {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 18px;
   color: #272727;
   position: absolute;
   right: 0;
   line-height: 33px;
   padding-right: 12px;
   white-space: nowrap;
+}
+
+.pro_bar h5 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #999;
+	margin: 0px;
 }

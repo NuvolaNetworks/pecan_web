@@ -85,9 +85,9 @@
 	border-width: 1px;
 	border-style: solid;
 	border-radius: 0;
-	background: #fff;
+	background: rgba(69,69,69,0.8);
 	font: 15px/19px 'Open Sans', Helvetica, Arial, sans-serif;
-	color: #404040;
+	color: #fff;
 	appearance: normal;
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -369,16 +369,21 @@
 /**/
 .sky-form .button {
 	float: left;
-	height: 39px;
+	height: 50px;
 	overflow: hidden;
 	margin: 0px 0 0 0px;
-	padding: 0 25px;
+	padding: 0 30px;
 	outline: none;
 	border: 0;
-	font: 300 15px/39px 'Open Sans', Helvetica, Arial, sans-serif;
+	font: 400 15px/39px 'Open Sans', Helvetica, Arial, sans-serif;
 	text-decoration: none;
 	color: #fff;
 	cursor: pointer;
+	text-transform: uppercase;
+}
+.sky-form .button:hover {
+	color: #fff;
+	background-color: #454545;
 }
 .sky-form .button-uploading {
 	position: relative;
@@ -1595,7 +1600,7 @@
 .sky-form .toggle i,
 .sky-form .icon-append,
 .sky-form .icon-prepend {
-	border-color: #d3d3d3;
+	border-color: #494949;
 	transition: border-color 0.3s;
 	-o-transition: border-color 0.3s;
 	-ms-transition: border-color 0.3s;
@@ -1614,8 +1619,7 @@
 	-webkit-transition: color 0.3s;
 }
 .sky-form .button {
-	background-color: #272727;
-	opacity: 0.8;
+	background-color: #1da4dd;
 	transition: opacity 0.2s;
 	-o-transition: opacity 0.2s;
 	-ms-transition: opacity 0.2s;
@@ -1628,7 +1632,7 @@
 }
 .sky-form .icon-append,
 .sky-form .icon-prepend {
-	color: #ccc;
+	color: #999;
 }
 
 .sky-form .fright {
@@ -1698,14 +1702,14 @@
 .sky-form .radio.state-error i,
 .sky-form .checkbox.state-error i,
 .sky-form .toggle.state-error i {
-	background: #fff0f0;
+	background: rgba(69,69,69,0.9);
 }
 .sky-form .state-error select + i {
-	background: #fff0f0;
+	background: rgba(69,69,69,0.9);
 	box-shadow: 0 0 0 12px #fff0f0;
 }
 .sky-form .toggle.state-error input:checked + i {
-	background: #fff0f0;
+	background: rgba(69,69,69,0.9);
 }
 .sky-form .state-error + em {
 	display: block;
@@ -1714,7 +1718,7 @@
 	font-style: normal;
 	font-size: 11px;
 	line-height: 15px;
-	color: #ee9393;
+	color: #e9ed99;
 }
 .sky-form .rating.state-error + em {
 	margin-top: -4px;
@@ -1924,6 +1928,7 @@
 	text-align: left;
 	white-space: normal;
 	color: inherit;
+	color: #999;
 }
 .sky-form .radio,
 .sky-form .checkbox {
