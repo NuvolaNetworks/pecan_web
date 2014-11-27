@@ -25,24 +25,32 @@
 4. Footer
 	+ copyrights
 	+ google map
-	
+	arvo bold
 --------------------------------------------------------*/
 
 /* Logo */
 .logo {
-	float: left;
-	width: 14%;
+	float: right;
+	width: 0%;
 	background-color: #1da4dd;
 }
 .logo img {
-	float: left;
+	float: right;
 	margin-left: 27px;
 }
 .menu_main {
-	float: right;
-	width: 86%;
+	float: left !important;
+	width: 100%;
+	height: 60px !important;
 }
 
+#mainPic {
+/*	margin-top: 60px !important;*/
+}
+
+.ms-slide-layers {
+	margin-top: 60px;
+}
 /*------------------*/
 /*	SITE STRUCTURE
 /*------------------------------------------------------*/
